@@ -3,12 +3,21 @@
 
 @include main;
 
+html {
+    scroll-behavior: smooth;
+}
+
 header, footer {
     padding: 2em 20%;
 }
 
 section {
-    padding: 2em 10%;
+    padding: 3em 10%;
+
+    h1 {
+        text-transform: uppercase;
+        text-align: center;
+    }
 }
 
 header {
@@ -60,3 +69,29 @@ header {
         text-align: center;
     }
 }
+
+#catalog {
+
+    background-color: $grey-background;
+
+    .img-section {
+        margin-top: 4em;
+        width: 24%;
+        display: inline-block;
+        text-align: center;
+    }
+
+    img {
+        width: 80%;
+    }
+
+    .view-offers-btn {
+        text-decoration: none;
+        padding: .5em 2em;
+        display: inline-block;
+        background-color: $main-red;
+        color: white;
+        margin-top: .5em;
+    }
+}
+
