@@ -3,3 +3,60 @@
 
 @include main;
 
+header, footer {
+    padding: 2em 20%;
+}
+
+section {
+    padding: 2em 10%;
+}
+
+header {
+    background-image: url("../slike/background.jpg");
+    background-size: cover;
+    height: 100vh;
+
+    nav {
+        background-color: white;
+        padding: 1em;
+
+        div {
+            display: inline-block;
+            font-weight: bold;
+            color: $main-red;
+            font-size: 1.2em;
+
+            span {
+                color: $main-text-color;
+            }
+        }
+        
+        ul {
+          list-style-type: none;
+          float: right;
+
+          li {
+
+            a {
+                text-decoration: none;
+                text-transform: uppercase;
+                padding: 0 1em;
+                font-size: .8em;
+            }
+          }
+        }
+    }
+
+    h1 {
+        color: white;
+        width: 60%;
+        border-bottom: 1px solid $main-red;
+        text-align: center;
+        margin: 25% auto 0;
+    }
+
+    h3 {
+        color: white;
+        text-align: center;
+    }
+}
