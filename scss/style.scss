@@ -153,4 +153,31 @@ footer {
     }
 }
 
+@media screen and(max-width: 1250px) { 
+    header {
+        padding: 1em 1em;
+
+        h1 {
+            width: 90%;
+            margin-top: 20%;
+        }
+    }
+
+    #catalog {
+        .img-section {
+            width: 49%;
+        }
+    }
+
+    footer {
+        text-align: center;
+        
+        address, iframe {
+            float: none;
+        }
+    }
+
+
+}
+
 
