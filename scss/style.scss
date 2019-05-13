@@ -78,7 +78,32 @@ header {
         margin-top: 4em;
         width: 24%;
         display: inline-block;
+        
         text-align: center;
+    }
+
+    .on-hover {
+        width: 100%;
+
+        h1 { 
+            display: none;
+        }
+    }
+    
+    .on-hover:hover {
+        position: relative;
+
+        img {
+            opacity: .3;
+        }
+        
+        h1 {
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
 
     img {
@@ -86,11 +111,7 @@ header {
     }
 
     .view-offers-btn {
-        text-decoration: none;
-        padding: .5em 2em;
-        display: inline-block;
-        background-color: $main-red;
-        color: white;
+        @include button;
         margin-top: .5em;
     }
 }
@@ -124,6 +145,10 @@ header {
                 border-bottom: 1px solid gray;
             }
         }
+    }
+
+    .view-pricint-btn {
+        display: none;
     }
 }
 
@@ -171,13 +196,57 @@ footer {
 
     footer {
         text-align: center;
-        
+
         address, iframe {
             float: none;
         }
     }
-
-
 }
 
+@media screen and(max-width: 650px) {
+    header {
+        background-image: none;
+        background-color: black;
+        height: auto;
+
+        nav {
+           div {
+               display: block;
+           }
+
+           ul {
+               text-align: center;
+               float: none;
+
+               li {
+                   a {
+                    display: block;
+                    padding: 1em;
+                    }
+               }
+           }
+        }
+
+        h1 {
+            margin-top: 1em;
+        }
+    }
+
+    #catalog {
+        .img-section {
+            width: 100%;
+        }
+    }
+
+    .pricing {
+        text-align: center;
+
+        table {
+            display: none;
+        }
+        .view-pricint-btn {
+            @include button;
+        }
+    }
+}
 
